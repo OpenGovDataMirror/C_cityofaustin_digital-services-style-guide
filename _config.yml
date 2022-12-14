@@ -1,0 +1,68 @@
+title: Digital Services Style Guide
+description: The Digital Services Style Guide is a resource for writing better copy for City of Austin websites.
+email: innovationfellows@austintexas.gov
+timezone: UTC
+collections:
+  words:
+    title: Words
+    output: true
+    permalink: "/:path/"
+  guide:
+    permalink: "/:path/"
+    output: true
+
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: sidebar-page
+- scope:
+    path: _guide
+    type: guide
+  values:
+    layout: default
+- scope:
+    path: 'example-folder'
+  values:
+    layout: sidebar-page
+- scope:
+    path: ''
+    type: words
+  values:
+    layout: sidebar-page
+
+baseurl:
+url: https://cityofaustin.github.io/digital-services-style-guide
+twitter:
+  username: civiqueso
+zilker_theme: dark
+markdown: kramdown
+include:
+  - README.md
+gems:
+- jekyll-seo-tag
+- jekyll-sitemap
+- jekyll-redirect-from
+- jekyll-optional-front-matter
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+sass:
+  sass_dir: assets/stylesheets/
+permalink: pretty
+exclude:
+- node_modules
+- gulpfile.js
+- Gemfile
+- Gemfile.lock
+- npm-debug.log
+- "/screenshots"
+- "/assets/stylesheets/bourbon"
+- "/assets/stylesheets/bourbon-neat"
+- "/assets/uswds/stylesheets"
+- "/assets/uswds/js"
+- ".bundle"
+- "/vendor"
+- _bourbon
+- _bourbon-neat
+- _uswds
